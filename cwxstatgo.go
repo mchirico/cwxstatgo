@@ -26,7 +26,7 @@ func main() {
 
 	cwxstatgo.Pr(t)                   // Prints each node
 	fmt.Println(cwxstatgo.Add(t))     // All values Added up
-	fmt.Println(cwxstatgo.nodes(t))   // Number of individual slices
+	fmt.Println(cwxstatgo.Nodes(t))   // Number of individual slices
 	fmt.Println(cwxstatgo.Flatten(t)) // Gives back origional list
 
 	cwxstatgo.WalkerRun(t)
@@ -85,7 +85,7 @@ func Add(t *Tree) (sum int) {
 func Nodes(t *Tree) (sum int) {
 	sum = 0
 	if t != nil {
-		sum = nodes(t.Left) + nodes(t.Right)
+		sum = Nodes(t.Left) + Nodes(t.Right)
 		if t.Value != nil {
 			sum = sum + 1
 		}
