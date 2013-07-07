@@ -1,16 +1,17 @@
 cwxstatgo
 =========
 
-<<<<<<< HEAD
+
 
 Installation:
-------------_
+-------------
 
   go get github.com/mchirico/cwxstatgo
 
 
 Usage:
------
+------
+
 
 package main
 
@@ -32,7 +33,5 @@ func main() {
 
         cwx.WalkerRun(t)
 }
-=======
-Go programs that I am studying
->>>>>>> c985bdc6d05c566c5a76405575175f353c5c6871
+
 
