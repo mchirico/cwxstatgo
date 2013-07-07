@@ -46,24 +46,24 @@ type Tree struct {
 	Right *Tree
 }
 
-func insert(t *Tree, v []int) *Tree {
+func Insert(t *Tree, v []int) *Tree {
 	if t == nil {
 		t = &Tree{nil, nil, nil}
 	}
-	// Add code to insert Additional slices
+	// Add code to Insert Additional slices
 	if len(v) > MAX_SLICE {
 
-		t.Left = insert(t.Left, v[:len(v)/2])
-		t.Right = insert(t.Right, v[len(v)/2:])
+		t.Left = Insert(t.Left, v[:len(v)/2])
+		t.Right = Insert(t.Right, v[len(v)/2:])
 		return t
 	}
 	return &Tree{nil, v, nil}
 }
 
-func pr(t *Tree) {
+func Pr(t *Tree) {
 	if t != nil {
-		pr(t.Left)
-		pr(t.Right)
+		Pr(t.Left)
+		Pr(t.Right)
 		if t.Value != nil {
 			fmt.Println(t.Value)
 		}
