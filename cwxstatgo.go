@@ -10,27 +10,28 @@
 
  Example Program:
 
+
 package main
 
 import (
- 
-    "github.com/mchirico/cwxstatgo"  
+        cwx "github.com/mchirico/cwxstatgo"
+        "fmt"
 )
-   
 
 func main() {
-	var t *cwxstatgo.Tree
-	a := []int{10, 10, 2, 3, 8, 9}
+        var t *cwx.Tree
+        a := []int{10, 10, 2, 3, 8, 9}
 
-	t = cwxstatgo.Insert(t, a)
+        t = cwx.Insert(t, a)
 
-	cwxstatgo.Pr(t)                   // Prints each node
-	fmt.Println(cwxstatgo.Add(t))     // All values Added up
-	fmt.Println(cwxstatgo.Nodes(t))   // Number of individual slices
-	fmt.Println(cwxstatgo.Flatten(t)) // Gives back origional list
+        cwx.Pr(t)                   // Prints each node
+        fmt.Println(cwx.Add(t))     // All values added up
+        fmt.Println(cwx.Nodes(t))   // Number of individual slices
+        fmt.Println(cwx.Flatten(t)) // Gives back origional list
 
-	cwxstatgo.WalkerRun(t)
+        cwx.WalkerRun(t)
 }
+
    
    
 */
@@ -144,17 +145,32 @@ func WalkerRun(t *Tree) {
 }
 
 /*
+
+//    Installation:
+//       go get github.com/mchirico/cwxstatgo
+
+
+package main
+
+import (
+        cwx "github.com/mchirico/cwxstatgo"
+        "fmt"
+)
+
 func main() {
-	var t *Tree
-	a := []int{10, 10, 2, 3, 8, 9}
+        var t *cwx.Tree
+        a := []int{10, 10, 2, 3, 8, 9}
 
-	t = Insert(t, a)
+        t = cwx.Insert(t, a)
 
-	pr(t)                   // Prints each node
-	fmt.Println(Add(t))     // All values Added up
-	fmt.Println(Nodes(t))   // Number of individual slices
-	fmt.Println(Flatten(t)) // Gives back origional list
+        cwx.Pr(t)                   // Prints each node
+        fmt.Println(cwx.Add(t))     // All values added up
+        fmt.Println(cwx.Nodes(t))   // Number of individual slices
+        fmt.Println(cwx.Flatten(t)) // Gives back origional list
 
-	WalkerRun(t)
+        cwx.WalkerRun(t)
 }
+
+
+
 */
