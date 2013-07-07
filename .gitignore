@@ -1,0 +1,55 @@
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+*.pyc
+
+# generated files
+bin/
+gen/
+*.gem
+*.rbc
+.bundle
+.config
+.class
+.metadata
+*.war
+*.ear
+*.jar
+coverage
+InstalledFiles
+lib/bundler/man
+pkg
+rdoc
+spec/reports
+test/tmp
+test/version_tmp
+tmp
+
+# YARD artifacts
+.yardoc
+_yardoc
+doc/
+.svn-base
+
+# iPhone
+build/
+.DS_Store
+**/*.pbxuser
+*.mode2v3
+*.mode1v3
+**/*.perspectivev*
+
+
+# passwords
+client_secrets.json
+bigquery_credentials.dat
+
+
+mdo
