@@ -82,7 +82,7 @@ func Add(t *Tree) (sum int) {
 	}
 	return
 }
-func nodes(t *Tree) (sum int) {
+func Nodes(t *Tree) (sum int) {
 	sum = 0
 	if t != nil {
 		sum = nodes(t.Left) + nodes(t.Right)
