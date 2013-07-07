@@ -22,12 +22,12 @@ func main() {
 	var t *cwxstatgo.Tree
 	a := []int{10, 10, 2, 3, 8, 9}
 
-	t = cwxstatgo.insert(t, a)
+	t = cwxstatgo.Insert(t, a)
 
-	cwxstatgo.pr(t)                   // Prints each node
-	fmt.Println(cwxstatgo.add(t))     // All values added up
+	cwxstatgo.Pr(t)                   // Prints each node
+	fmt.Println(cwxstatgo.Add(t))     // All values Added up
 	fmt.Println(cwxstatgo.nodes(t))   // Number of individual slices
-	fmt.Println(cwxstatgo.flatten(t)) // Gives back origional list
+	fmt.Println(cwxstatgo.Flatten(t)) // Gives back origional list
 
 	cwxstatgo.WalkerRun(t)
 }
@@ -50,7 +50,7 @@ func insert(t *Tree, v []int) *Tree {
 	if t == nil {
 		t = &Tree{nil, nil, nil}
 	}
-	// Add code to insert additional slices
+	// Add code to insert Additional slices
 	if len(v) > MAX_SLICE {
 
 		t.Left = insert(t.Left, v[:len(v)/2])
@@ -70,10 +70,10 @@ func pr(t *Tree) {
 	}
 }
 
-func add(t *Tree) (sum int) {
+func Add(t *Tree) (sum int) {
 	sum = 0
 	if t != nil {
-		sum = add(t.Left) + add(t.Right)
+		sum = Add(t.Left) + Add(t.Right)
 		if t.Value != nil {
 			for i := range t.Value {
 				sum = sum + t.Value[i]
@@ -92,11 +92,11 @@ func nodes(t *Tree) (sum int) {
 	}
 	return
 }
-func flatten(t *Tree) (a []int) {
+func Flatten(t *Tree) (a []int) {
 	a = []int{}
 	if t != nil {
-		a = append(a, flatten(t.Left)...)
-		a = append(a, flatten(t.Right)...)
+		a = append(a, Flatten(t.Left)...)
+		a = append(a, Flatten(t.Right)...)
 
 		if t.Value != nil {
 			a = append(a, t.Value...)
@@ -143,16 +143,18 @@ func WalkerRun(t *Tree) {
 
 }
 
+/*
 func main() {
 	var t *Tree
 	a := []int{10, 10, 2, 3, 8, 9}
 
-	t = insert(t, a)
+	t = Insert(t, a)
 
 	pr(t)                   // Prints each node
-	fmt.Println(add(t))     // All values added up
-	fmt.Println(nodes(t))   // Number of individual slices
-	fmt.Println(flatten(t)) // Gives back origional list
+	fmt.Println(Add(t))     // All values Added up
+	fmt.Println(Nodes(t))   // Number of individual slices
+	fmt.Println(Flatten(t)) // Gives back origional list
 
 	WalkerRun(t)
 }
+*/
