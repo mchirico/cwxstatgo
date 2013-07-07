@@ -1,12 +1,8 @@
-cwxstatgo
-=========
-
-
 
 Installation:
 -------------
 
-  go get github.com/mchirico/cwxstatgo
+       go get github.com/mchirico/cwxstatgo
 
 
 Usage:
