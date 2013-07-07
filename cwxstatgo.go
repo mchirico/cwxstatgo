@@ -2,11 +2,11 @@
    Example of tree
    mchirico@gmail.com
    http://play.golang.org/p/yGYwb9ACeG
- 
+
  Installation:
 
    go get github.com/mchirico/cwxstatgo
-  
+
 
  Example Program:
 
@@ -32,8 +32,8 @@ func main() {
         cwx.WalkerRun(t)
 }
 
-   
-   
+
+
 */
 package cwxstatgo
 
